@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #111827;
+    }
+}
+
+@layer components {
+    /* Make external SVG icons appear white in sidebar */
+    .icon-white {
+        filter: brightness(0) invert(1);
+    }
+    .form-input {
+        width: 100%;
+        height: 2.5rem;
+        background-color: #111827;
+        color: #ffffff;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: 1px solid #4b5563;
+    }
+
+    .form-input:focus {
+        box-shadow: 0 0 0 6px rgba(80,68,229,0.15);
+    }
+
+    .rich-text h1,
+    .rich-text h2,
+    .rich-text h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    .rich-text p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: #D1D5DB;
+    }
+
+    .rich-text a {
+        color: #ff0000;
+        text-decoration: underline;
+    }
+
+    .rich-text ol,
+    .rich-text ul {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+    }
+
+    .rich-text li {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .rich-text pre {
+        background-color: #1f2937;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        overflow-x: auto;
+        font-size: 0.875rem;
+    }
+
+    .rich-text blockquote {
+        border-left: 4px solid #ff0000;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .ql-editor {
+        min-height: 20rem !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1e293b;
+}
